@@ -11,12 +11,12 @@ app = Flask(__name__)
 predefined_disasters = ["earthquake", "flood", "fire", "hurricane", "tornado", "explosion", "accident", "tsunami", "volcano", "drought", "pandemic", "wildfire", "avalanche", "cyclone", "landslide", "heatwave", "blizzard", "terrorist attack", "nuclear meltdown", "chemical spill"]
 
 # Load the saved models
-naive_bayes_model = joblib.load('naive_bayes_model.pkl')
-random_forest_model = joblib.load('random_forest_model.pkl')
-lstm_model = load_model('lstm_model.h5')
+naive_bayes_model = joblib.load('models/naive_bayes_model.pkl')
+random_forest_model = joblib.load('models/random_forest_model.pkl')
+lstm_model = load_model('models/lstm_model.h5')
 
 # Load the TF-IDF vectorizer if you have previously saved it
-tfidf_vectorizer = joblib.load('tfidf_vectorizer.pkl')
+tfidf_vectorizer = joblib.load('models/tfidf_vectorizer.pkl')
 
 
 @app.route('/', methods=['GET', 'POST'])
